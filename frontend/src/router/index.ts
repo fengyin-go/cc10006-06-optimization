@@ -4,6 +4,7 @@ import Overview from '@/views/Overview.vue'
 const Catalog = () => import('@/views/catalog/index.vue')
 const Ingest = () => import('@/views/ingest/index.vue')
 const Bronze = () => import('@/views/bronze/index.vue')
+const BronzeDetail = () => import('@/views/bronze/detail.vue')
 const Silver = () => import('@/views/silver/index.vue')
 const Gold = () => import('@/views/gold/index.vue')
 const Lakezone = () => import('@/views/lakezone/index.vue')
@@ -27,6 +28,7 @@ const router = createRouter({
     { path: '/catalog', name: 'catalog', component: Catalog },
     { path: '/ingest', name: 'ingest', component: Ingest },
     { path: '/bronze', name: 'bronze', component: Bronze },
+    { path: '/bronze/:id', name: 'bronze-detail', component: BronzeDetail },
     { path: '/silver', name: 'silver', component: Silver },
     { path: '/gold', name: 'gold', component: Gold },
     { path: '/lakezone', name: 'lakezone', component: Lakezone },

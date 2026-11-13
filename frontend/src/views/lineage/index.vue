@@ -31,12 +31,14 @@
       <thead>
         <tr>
           <th v-for="column in columns" :key="column">{{ column }}</th>
+          <th>采集状态</th>
           <th>可执行动作</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="row in rows" :key="String(row.id)">
           <td v-for="column in columns" :key="column">{{ row[column] ?? '—' }}</td>
+          <td>{{ row.status }}</td>
           <td class="row-actions">
             <button
               v-for="action in actions"
@@ -50,7 +52,7 @@
           </td>
         </tr>
         <tr v-if="!rows.length">
-          <td :colspan="columns.length + 1" class="empty-state">暂无血缘图谱数据，可先登记血缘节点</td>
+          <td :colspan="columns.length + 2" class="empty-state">暂无血缘图谱数据，可先登记血缘节点</td>
         </tr>
       </tbody>
     </table>

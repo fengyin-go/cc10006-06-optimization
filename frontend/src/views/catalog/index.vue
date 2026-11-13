@@ -70,7 +70,7 @@ import { request } from '@/api/client'
 type Row = Record<string, string | number | null>
 
 const ENDPOINT = '/api/catalog'
-const columns = ["编目编号", "数据集名称", "存储路径", "文件格式", "所属分层", "负责人", "业务域标签", "编目版本"]
+const columns = ["编目编号", "数据集名称", "存储路径", "文件格式", "保留策略", "分区规则", "压缩类型", "数据校验", "所属分层", "负责人", "业务域标签", "编目版本"]
 const actions = ["提交审核", "发布目录", "废弃目录"]
 const statuses = ["草稿", "待审核", "已发布", "已废弃"]
 const stats = [{"label": "数据目录总数", "value": 0}, {"label": "已发布目录", "value": 0}, {"label": "待审核目录", "value": 0}]

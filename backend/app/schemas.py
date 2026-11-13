@@ -26,6 +26,10 @@ class EntryPayload(BaseModel):
 
     values: dict[str, Any] = Field(default_factory=dict)
     remark: str | None = None
+    # 修改链路携带的期望版本，用于乐观并发校验；登记时留空
+    expected_version: int | None = Field(default=None, alias="期望版本")
+
+    model_config = {"populate_by_name": True}
 
 
 
